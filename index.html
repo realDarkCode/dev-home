@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome || Homepage</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bg">
+            <!-- container -->
+
+        <div class="container">
+        <!---------------------------------------- TopBar ---------------------------->
+            <div class="topbar-wrapper noselectable">
+                <!---------------------------------------- Weather ---------------------------->
+                <div class="weather">
+                    <div class="weatherIcon">
+                        <img  src="Images/icons/cloudy.png" alt="cloddy">
+                    </div>
+                    <h3 class="weatherText">28°</h3>
+                </div>
+                <!---------------------------------------- Time Title Message ---------------------------->
+                <div class="timeTitle">
+                    <h2>Good morning, Sir!</h2>
+                </div>
+                <!---------------------------------------- date and time ---------------------------->
+                <div class="dateAndTime">
+                    <div class="timeIcon">
+                        <img class="timeIcon" src="images/icons/noon.png" alt="">
+                    </div>
+                    <div class="timeText">
+                        <div class="time">
+                            <span> 0:0:0</span>
+                            </div>
+                            <div class="date">
+                            <span> 0/0/0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------------------------- Mid bar ---------------------------->
+            <div class="midbar">
+                            <!---------------------------------------- Social ---------------------------->
+
+                <div class="social-wrapper">
+                    <div class="social-item">
+                        <a href="https://web.facebook.com" class="fab fa-facebook-f facebook-ico"></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://www.youtube.com" class="fab fa-youtube youtube-ico"></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://www.gmail.google.com" class="far fa-envelope gmail-ico"></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://twitter.com/" class="fab fa-twitter twitter-ico"></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://www.instagram.com/" class="fab fa-instagram instagram-ico"></a>
+                    </div>
+                    <div class="hideBtn">
+                        <i class="fas fa-angle-left"></i>
+                    </div>
+                </div>
+                            <!---------------------------------------- search bar ---------------------------->
+                <div class="quote-section noselectable">
+                    <div class="quote">
+                        "A successful website does three things:
+                        It attracts the right kinds of visitors.
+                        Guides them to the main services or product you offer.
+                        Collect Contact details for future ongoing relation."
+                    </div>
+                    <div class="quote-author">
+                       - Mohamed Saad
+                    </div>
+                </div>
+                 <div class="search-bar-wrapper">
+                    <div class="search-bar">
+                        <div class="googleIcon">
+                            <img src="images/icons/google-icon.png" alt="" srcset="">
+                        </div>
+                        <form class="google-searchBar" action="https://www.google.com/search" method="get">
+                            <input type="text" name="q" placeholder="What's on your mind" id="searchInput">
+                            <button type="submit" id="searchBtn" ><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                </div> 
+                <!---------------------------------------- Corona update ---------------------------->
+                  <!-- <div class="corona-update">
+                    <iframe class="corona-iframe" height="300" width="600" src="https://corona.gov.bd" frameborder="no"></iframe>
+                </div>  -->
+                
+            </div> 
+            <section class="bottom-bar">
+                <div class="todo-section">
+                    <div class="todo-header">
+                        <i class="todo-header-logo fas fa-tasks"></i>
+						<select class="todoFilter">
+							<option value= "all" default>all</option>
+							<option value= "completed">completed</option>
+							<option value= "uncompleted">uncompleted</option>
+						</select>
+                        <h3 class="todo-header-title">To Do</h3>
+                    </div>
+                    <div class="todo-body">
+                        <div class="todo-body-inner">
+
+
+                        </div>
+                        <div class="todo-input">
+                            
+                            <div class="input-grp">
+                                <input type="text" class="todo-input-text" placeholder="Enter your todo">
+                                <select  class="todo-input-time">
+                                    <option  value="00:05:00" default>5 min</option>
+                                    <option  value="00:10:00">10 min</option>
+                                    <option  value="00:15:00">15 min</option>
+                                    <option  value="00:30:00">30 min</option>         
+                                    <option  value="01:00:00">1 hour</option>         
+                                    <option  value="02:00:00">2 hour</option>         
+
+                                </select>
+                            </div>
+                            <div class="todo-input-btn">
+                                add task <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </section>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/todo.js"></script>
+    
+</html>

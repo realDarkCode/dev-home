@@ -1,0 +1,628 @@
+@font-face{
+    font-family: quote;
+    src: url(../webfonts/Grandstander-Regular-Quote.woff);
+}
+@font-face{
+    font-family: quote-bold;
+    src: url(../webfonts/Montserrat-Bold-sideTitle.woff);
+}
+@font-face{
+    font-family: side-title;
+    src: url(../webfonts/Montserrat-Regular-sideTitle.woff);
+}
+@font-face{
+    font-family: side-title-bold;
+    src: url(../webfonts/Montserrat-Bold-sideTitle.woff);
+}
+@font-face{
+    font-family: title;
+    src: url(../webfonts/Roboto-Regular-Title.woff);
+}
+@font-face{
+    font-family: title-bold;
+    src: url(../webfonts/Roboto-Bold-Title.woff);
+}
+@font-face{
+    font-family: to-do;
+    src: url(../webfonts/OpenSans-Bold-ToDo.woff);
+}
+body{
+    background: url(../Images/background/noon-cloudy.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: background 1s;
+    overflow: hidden;
+}
+
+.bg{
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{width: 100%;}
+/* class that will block users to select part of web */
+.noselectable {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+ /*-----------------------------------------Topbar-------------------*/
+.topbar-wrapper img{
+    width: 100%;
+}
+.container{
+    max-width: 95vw;
+    max-height: 95vh;
+    margin: auto;
+}
+.topbar-wrapper{
+    height: 70px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.weather{
+    /* width: 191px; */
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.weatherIcon {
+    float: left;
+    width: 50px;
+}
+.weatherText {
+    float: left;
+    font-family: side-title;
+    font-size: 22px;
+    margin-left: 10px;
+    justify-self: center;
+}
+.timeTitle{
+    font-family: title-bold;
+    text-transform: capitalize;
+    font-size: 22px;
+
+}
+.dateAndTime{
+    /* width: 120px; */
+    overflow: hidden;
+}
+.timeIcon{
+    width: 40px;
+    float: left;
+    margin-right: 10px;
+}
+.timeText{
+    font-family: side-title-bold;
+}
+
+ /*-----------------------------------------Mid Bar-------------------*/
+.midbar{
+    margin-top: 100px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+ /*-----------------------------------------social-------------------*/
+
+.social-wrapper{
+    position: absolute;
+    width: 250px;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    justify-content: space-between;
+    left: 0;
+    padding-right: 25px;
+    transform-origin: left;
+    animation: social 1s ;
+}
+@keyframes social{
+    from{width: 60px;}
+    to{width: 250px;}
+}
+.social-item{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+    animation: socail-iteam 1s;
+}
+@keyframes socail-iteam {
+    from{transform: scale(0);}
+    to{transform: scale(1);}
+}
+.social-item a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: .3s;
+    border-radius: 100%;
+
+}
+.social-item a:hover{
+    background: white;
+    color: black;
+}
+.facebook-ico{
+    background-color:#3b5998 ;
+    padding: 10px 12px !important;
+}
+.youtube-ico{
+    background-color:#FF0000 ;
+}.gmail-ico{
+    background-color:#D44638 ;
+}.twitter-ico{
+    background-color:#00acee  ;
+}.instagram-ico{
+    background:linear-gradient(150deg, #405DE6,#5851DB, #833AB4, #C13584, #E1306C, #FD1D1D,  #F77737, #FCAF45, #FFDC80) ;
+    padding-right: 50px;
+}
+
+.hideBtn{
+    
+    position: absolute;
+    right: 0;
+    transform: translate(50%);
+    background: #252525;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #ff5200;
+    transition: .3s;
+    font-size: 20px;
+    opacity:0 ;
+    transform: translateX(50px) scale(0);
+}
+
+.social-wrapper:hover .hideBtn{
+    opacity:1 ;
+    transform: translateX(50%) scale(1);
+}
+.hideBtn:hover{
+    background:#81b214 ;
+    color: white;
+    
+}
+/* social hide option */
+.social-hide .social-item{
+    transition: 1s;
+    transform: scale(0);
+}
+.social-hide{
+    animation:  hideSocial 1s forwards;
+}
+.social-hide .hideBtn{
+    transform:scale(1) translateX(-50%);
+    left: 50%;
+    opacity: 1;
+}
+@keyframes hideSocial{
+    from{width: 250px;}
+    to{width: 60px;}
+}
+.social-hide:hover .hideBtn{
+    transform:scale(1) translateX(-50%);
+    left: 50%;
+}
+.social-hide .hideBtn i{
+    transition: transform 1s;
+    transform: rotate(180deg);
+}
+
+ /*-----------------------------------------Search Bar-------------------*/
+
+
+
+.search-bar-wrapper{
+    background-color: white;
+    position: absolute;
+    top: 95px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 10;
+}
+.search-bar{
+    display: flex;
+    height: 30px;
+    width: 500px;
+    
+}
+.googleIcon{
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+.googleIcon img{
+    width: 55%;
+}
+.google-searchBar{
+    width: 85%;
+    display: flex;
+}
+#searchInput{
+    transition: .3s;
+    background: none;
+    border: none;
+    font-family: side-title;
+    font-size: 16px;
+    width: 80%;
+}
+#searchInput:focus{
+    border: none;
+    outline: none;
+}
+#searchInput::placeholder{
+    text-transform: capitalize;
+    
+}
+#searchBtn{
+    transition: .3s;
+    width: 20%;
+    height: 100%;
+    background-color: #FF5200;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right:  0;
+    top: 0;
+}
+#searchBtn:hover{
+    background-color: #81b214 ;
+}
+#searchBtn i{
+    font-size: 18px;
+} 
+/*-----------------------------------------Corona Update-------------------*/
+.corona-update{
+    position: absolute;
+    width: 475px;
+    height: 133px;
+    overflow: hidden;
+    right: -17px;
+    top: -14px;
+}
+.corona-update iframe{
+    height: 1200px;
+    width: 1600px;
+    position: absolute;
+    top: -578px;
+    left: -566px;
+    transform: scale(.4);
+}
+/*-----------------------------------------Quote-------------------*/
+
+.quote-section{
+    position: absolute;
+    width: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: quote;
+    color: white;
+}
+.quote{
+    font-size: 20px;
+    text-align: center;
+    line-height: 25px;
+}
+
+
+.quote-author{
+    margin-top: 5px;
+    text-align: right;
+}
+
+/*-------------------------------------------------- bottom side bar ------------------*/
+.bottom-bar{
+    position: relative;
+    margin-top: 150px;
+}
+/*-------------------------------------------------- todo------------------*/
+.todo-section{
+    width: 300px;
+    position: relative;
+}
+.todo-header{
+    background: #81b214;
+    padding: 10px;
+    font-family: title;
+    font-size: 16px;
+    color: white;
+    border-radius: 4px;
+    position: relative;
+    
+}
+.todo-header i {
+    float: left;
+    margin-top: 4px;
+    position: absolute;
+    font-size: 20px;
+}
+.todo-header  h3{
+    text-align: center;
+}
+.todo {
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    align-items: center;
+}
+
+.todo-item-icon {
+    width: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-body-inner{
+	transform-origin:left;
+	transition:.5s;
+}
+.todo-item-icon i {transform: rotate(45deg);}
+.todo-body{
+    margin-top: 15px;
+    background: #ddd;
+    padding: 10px;
+    font-family: to-do;
+    font-size: 14px;
+    color: #444444;
+    overflow: hidden;
+    min-height: 35px;
+    padding-bottom: 20px;
+}
+.todo-iteam{
+    display: flex;
+    margin: 5px 0;
+    position: relative;
+    overflow: hidden;
+	transition:.5s;
+	transition:all .5s ease;
+	transform-origin:left;
+}
+.todo-iteam-icon{
+    margin-right: 5px;
+}
+.todo-delete, .todo-complete {
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 3px;
+    transition: .3s;
+}
+.todo-text {
+    text-transform: capitalize;
+    width: 90%;
+}
+.todo-icons {
+    width: 100px;
+    display: flex;
+    justify-content: flex-end;
+    visibility: hidden;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: .5s;
+    
+}
+.todo-iteam:hover .todo-timing{
+    opacity: 0;
+    transform: translateY(-50px);
+
+}
+.todo-timing {
+    position: absolute;
+    right: 0;
+    font-size: 16px;
+    transition: .5s;
+    opacity: 1;
+    transform: translateY(0);
+    
+}
+.todo-iteam:hover .todo-icons{
+    opacity: 1;
+    transform: translateX(0);
+    visibility:visible;
+}
+
+.todo-delete{
+    margin-right: 5px;
+    background: #870A30;
+    color: white;
+}
+.todo-complete{
+    background: #81b214;
+    color: white;
+
+}
+.todo-delete:hover{
+    color: #870A30;
+    background-color: #252525;
+}
+.todo-complete:hover{
+    color: #81b214;
+    background-color: #252525;
+}
+
+.todo-input{
+    /* margin-top: 7px; */
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(50%);
+    font-family: quote;
+}
+.todo-input .input-grp{
+   opacity:0;
+   transition:.5s;
+   transition-delay:.25s;
+   transform-origin:left;
+   transform: scaleX(0);
+   position:absolute;
+   left:0;
+   width: 100%;
+}
+
+.todo-input-btn{
+    background: #252525;
+    color: white;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+}
+
+.todo-input-btn:hover{
+    background: #870A30;
+   
+}
+.todo-input.active .todo-input-btn:hover{
+    border: 2px solid #870A30 !important;
+}
+.todo-input.active .input-grp{
+    opacity:1;
+	border:2px solid #252525;
+	transform: scaleX(1);
+}
+.todo-input.active .todo-input-btn{
+	left: 75%;
+	bottom: -28px;
+	/* right:0; */
+	border-radius: 0;
+	border: 2px solid #252525;
+	width: 50%;
+}
+
+
+
+.todo-input.active{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding-top: 20px;
+}
+
+.input-grp input{
+    border: none;
+    outline: none;
+    padding: 5px;
+    padding-right: 7px;
+    width: 100%;
+}
+.input-grp input::placeholder{
+    text-transform: capitalize;
+    margin-left: 15px;
+}
+.input-grp select{
+    text-align: center;
+    outline: none;
+    border: none;
+    width: 60px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #666;
+    border: 2px solid #252525;
+    /* border-left: 2px solid #252525; */
+    padding: 5px;
+    /* padding-right: 26px; */
+    width: 50%;
+    /* margin-left: -5px; */
+}
+.input-grp select::after{
+    content: '\25BC';
+    color: red;
+    right: 0;
+}
+/*todo delete and complete option*/
+.todoItemCompleted{
+	opacity:.3;
+}
+
+
+.todoItemCompleted .todo-text{
+	text-decoration:line-through;
+}
+.todoItemCompleted .todo-complete{
+	display:none;
+}
+.todoItemCompleted .todo-timing{
+	font-size:14px;
+}
+.deleteTodo{
+	
+	transform: translateY(50px)rotateZ(20deg);
+	opacity:0;
+
+}
+.todoFilter {
+    position: absolute;
+    right: 7px;
+    outline: none;
+    border: none;
+    top: 15px;
+    color: white;
+    background: #252525;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 6px;
+    font-family: title;
+    text-transform: capitalize;
+}
+.todoFilter:hover {
+    background: #1a1919;
+    color: white;
+}
+
+.todoFilter option {
+    color: white;
+    background: #252525;
+    transition: .5s;
+}
+
+.todoFilter option:hover {
+    transform: translateX(10px);
+    background: none;
+}
+.filering{
+	transition:.5s;
+	transform:translateX(-50px) scaleX(0);
+	opacity:0;
+	
+}
