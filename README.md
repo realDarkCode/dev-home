@@ -2,8 +2,8 @@
 
 # Dev-Home
 
-**Project-Name:** Dev-Home
-**Project-Status:** Running 🟢
+**Project-Name:** Dev-Home  
+**Project-Status:** Running 🟢  
 **Project-Timespan:** June 2022 - Present
 
 ---
