@@ -3,14 +3,20 @@
 # Dev-Home
 
 **Project-Name:** Dev-Home  
-**Project-Status:** Running 🟢  
+**Project-Status:** Active 🟢  
 **Project-Timespan:** June 2022 - Present
 
 ---
 
 ### Details
 
-The idea of this project is to maximize productivity for developer or students.
+The idea of this project is to maximize productivity for developer or students. this can be used as a new tab page which will help you to focus on task. You can add Todos, news and email from a single page. How cool that would be?
+
+### Made-With
+
+- Raw HTML, CSS
+- Vanilla JavaScript
+- ❤️
 
 ### Contributors
 
